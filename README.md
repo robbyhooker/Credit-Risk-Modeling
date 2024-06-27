@@ -112,19 +112,19 @@ The distribution of key variables such as `person_age`, `person_income`, `loan_a
 
 #### Distribution of Person Age
 
-![Distribution of Person Age](path_to_your_image/age_distribution.png)
+![Distribution of Person Age](Charts/age_distribution.png)
 
 #### Distribution of Person Income
 
-![Distribution of Person Income](path_to_your_image/income_distribution.png)
+![Distribution of Person Income](Charts/income_distribution.png)
 
 #### Distribution of Loan Amount
 
-![Distribution of Loan Amount](path_to_your_image/loan_distribution.png)
+![Distribution of Loan Amount](Charts/loan_distribution.png)
 
 #### Distribution of Loan Interest Rate
 
-![Distribution of Loan Interest Rate](path_to_your_image/rate_distribution.png)
+![Distribution of Loan Interest Rate](Charts/rate_distribution.png)
 
 ### Relationship Between Variables
 
@@ -132,17 +132,17 @@ Understanding the relationships between key variables such as `person_income` vs
 
 #### Person Income vs Loan Interest Rate
 
-![Person Income vs Loan Interest Rate](path_to_your_image/income_interestrate.png)
+![Person Income vs Loan Interest Rate](Charts/income_interestrate.png)
 
 #### Interest Rate vs Loan Amount
 
-![Interest Rate vs Loan Amount](path_to_your_image/interestrate_loanamnt.png)
+![Interest Rate vs Loan Amount](Charts/interestrate_loanamnt.png)
 
 ### Default Rates by Categories
 
 Default rates by categories such as `home_ownership`, `loan_intent`, and `loan_grade` provide insights into which groups are more likely to default.
 
-![Default Rates by Categories](path_to_your_image/default_rates.png)
+![Default Rates by Categories](Charts/default_rates.png)
 
 ### Model Performance Metrics
 
@@ -150,11 +150,11 @@ The performance of the Random Forest model is evaluated using ROC Curve and Conf
 
 #### ROC Curve
 
-![ROC Curve](path_to_your_image/rf_auc.png)
+![ROC Curve](Charts/rf_auc.png)
 
 #### Confusion Matrix
 
-![Confusion Matrix](path_to_your_image/rf_conf.png)
+![Confusion Matrix](Charts/rf_conf.png)
 
 ## Future Work
 Potential future improvements include:
