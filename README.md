@@ -16,7 +16,7 @@ This project aims to develop a statistical model to predict loan defaults based 
 
 ## Dataset Description
 
-The dataset used in this project is sourced from the [Kaggle]([https://www.kaggle.com/datasets/laotse/credit-risk-dataset]). It includes features such as age, income, employment length, loan amount, loan interest rate, and others. The target variable is whether the borrower defaulted on the loan.
+The dataset used in this project is sourced from the [Kaggle](https://www.kaggle.com/datasets/laotse/credit-risk-dataset). It includes features such as age, income, employment length, loan amount, loan interest rate, and others. The target variable is whether the borrower defaulted on the loan.
 
 ### Features
 
