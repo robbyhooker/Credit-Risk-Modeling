@@ -1,28 +1,25 @@
 # Credit Risk Modeling for Prediction
 
-## Table of Contents
-
-1. [Project Overview](#project-overview)
-2. [Dataset Description](#dataset-description)
-3. [Data Preprocessing](#data-preprocessing)
-4. [Feature Engineering](#feature-engineering)
-5. [Model Building](#model-building)
-6. [Model Evaluation](#model-evaluation)
-7. [Model Deployment](#model-deployment)
-8. [API Usage](#api-usage)
-9. [Results and Insights](#results-and-insights)
-10. [Future Work](#future-work)
-11. [Setup and Installation](#setup-and-installation)
-12. [Usage](#usage)
-13. [Contributing](#contributing)
-14. [License](#license)
-15. [Acknowledgements](#acknowledgements)
-
 ## Project Overview
 
 This project aims to develop a statistical model to predict loan defaults based on borrower information. In deployment, the model could help financial institutions assess the risk associated with lending to various applicants, thereby reducing potential financial losses.
 
-Risk Management!!!
+## Table of Contents
+
+1. [Dataset Description](#dataset-description)
+2. [Data Preprocessing](#data-preprocessing)
+3. [Feature Engineering](#feature-engineering)
+4. [Model Building](#model-building)
+5. [Model Evaluation](#model-evaluation)
+6. [Model Deployment](#model-deployment)
+7. [API Usage](#api-usage)
+8. [Results and Insights](#results-and-insights)
+9. [Future Work](#future-work)
+10. [Setup and Installation](#setup-and-installation)
+11. [Usage](#usage)
+12. [Contributing](#contributing)
+13. [License](#license)
+14. [Acknowledgements](#acknowledgements)
 
 ## Dataset Description
 
