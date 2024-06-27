@@ -12,7 +12,8 @@ This project aims to develop a statistical model to predict loan defaults based 
 4. [Model Building](#model-building)
 5. [Model Evaluation](#model-evaluation)
 6. [Results and Insights](#results-and-insights)
-7. [Future Work](#future-work)
+7. [Request Example](#request-example)
+8. [Future Work](#future-work)
 
 ## Dataset Description
 
@@ -39,72 +40,6 @@ The dataset used in this project is sourced from the [Kaggle](https://www.kaggle
 3. **Encoding Categorical Variables**: Categorical variables were encoded using one-hot encoding.
 
 ## Exploratory Data Analysis
-
-
-
-## Model Building
-
-Multiple models were built and compared, including:
-- Logistic Regression
-- Decision Tree
-- Random Forest
-
-Hyperparameter tuning was performed using GridSearchCV to find the best parameters for the randon forest model.
-
-## Model Evaluation
-
-Models were evaluated using various metrics:
-- **Confusion Matrix**: To visualize the performance in terms of true positives, true negatives, false positives, and false negatives.
-- **ROC Curve**: To evaluate the model's ability to distinguish between classes.
-- **AUC Score**: To quantify the overall performance.
-
-### Model Performance
-
-- **Logistic Regression**: ROC AUC = 0.85
-- **Decision Tree**: ROC AUC = 0.87
-- **Random Forest**: ROC AUC = 0.94 (Best Performing Model)
-
-### Request Example
-
-```json
- {
-  "person_age": 45,
-  "person_income": 55000,
-  "person_emp_length": 2,
-  "loan_amnt": 15000,
-  "loan_int_rate": 11.25,
-  "loan_percent_income": 0.170203,
-  "cb_person_cred_hist_length": 3,
-  "person_home_ownership_OTHER": 0, 
-  "person_home_ownership_OWN": 1,
-  "person_home_ownership_RENT": 0, 
-  "loan_intent_EDUCATION": 1,
-  "loan_intent_HOMEIMPROVEMENT": 0, 
-  "loan_intent_MEDICAL": 0,
-  "loan_intent_PERSONAL": 0, 
-  "loan_intent_VENTURE": 0,
-  "loan_grade_B": 1,
-  "loan_grade_C": 0,
-  "loan_grade_D": 0,
-  "loan_grade_E": 0,
-  "loan_grade_F": 0,
-  "loan_grade_G": 0,
-  "cb_person_default_on_file_Y": 0
-}
-```
-Response:</br>
-Model Default Prediction: 0 (non-default)</br> 
-Model Confidence in Prediction: 0.95%
-
-## Results and Insights
-
-The Random Forest model showed the best performance with an ROC AUC score of X.XX. Key insights from the model include:
-
-### Feature Importances
-
-The feature importances in the Random Forest model show which variables are most predictive of loan default. The most important features are `loan_percent_income`, `person_income`, and `loan_int_rate`.
-
-![Feature Importances](Charts/feature_importance.png)
 
 ### Distribution of Key Variables
 
@@ -144,6 +79,39 @@ Default rates by categories such as `home_ownership`, `loan_intent`, and `loan_g
 
 ![Default Rates by Categories](Charts/default_rates.png)
 
+
+## Model Building
+
+Multiple models were built and compared, including:
+- Logistic Regression
+- Decision Tree
+- Random Forest
+
+Hyperparameter tuning was performed using GridSearchCV to find the best parameters for the randon forest model.
+
+## Model Evaluation
+
+Models were evaluated using various metrics:
+- **Confusion Matrix**: To visualize the performance in terms of true positives, true negatives, false positives, and false negatives.
+- **ROC Curve**: To evaluate the model's ability to distinguish between classes.
+- **AUC Score**: To quantify the overall performance.
+
+### Model Performance
+
+- **Logistic Regression**: ROC AUC = 0.85
+- **Decision Tree**: ROC AUC = 0.87
+- **Random Forest**: ROC AUC = 0.94 (Best Performing Model)
+
+## Results and Insights
+
+The Random Forest model showed the best performance with an ROC AUC score of 0.94. Key insights from the model include:
+
+### Feature Importances
+
+The feature importances in the Random Forest model show which variables are most predictive of loan default. The most important features are `loan_percent_income`, `person_income`, and `loan_int_rate`.
+
+![Feature Importances](Charts/feature_importance.png)
+
 ### Model Performance Metrics
 
 The performance of the Random Forest model is evaluated using ROC Curve and Confusion Matrix.
@@ -155,6 +123,38 @@ The performance of the Random Forest model is evaluated using ROC Curve and Conf
 #### Confusion Matrix
 
 ![Confusion Matrix](Charts/rf_conf.png)
+
+## Request Example
+
+```json
+ {
+  "person_age": 45,
+  "person_income": 55000,
+  "person_emp_length": 2,
+  "loan_amnt": 15000,
+  "loan_int_rate": 11.25,
+  "loan_percent_income": 0.170203,
+  "cb_person_cred_hist_length": 3,
+  "person_home_ownership_OTHER": 0, 
+  "person_home_ownership_OWN": 1,
+  "person_home_ownership_RENT": 0, 
+  "loan_intent_EDUCATION": 1,
+  "loan_intent_HOMEIMPROVEMENT": 0, 
+  "loan_intent_MEDICAL": 0,
+  "loan_intent_PERSONAL": 0, 
+  "loan_intent_VENTURE": 0,
+  "loan_grade_B": 1,
+  "loan_grade_C": 0,
+  "loan_grade_D": 0,
+  "loan_grade_E": 0,
+  "loan_grade_F": 0,
+  "loan_grade_G": 0,
+  "cb_person_default_on_file_Y": 0
+}
+```
+Response:</br>
+Model Default Prediction: 0 (non-default)</br> 
+Model Confidence in Prediction: 0.95%
 
 ## Future Work
 Potential future improvements include:
