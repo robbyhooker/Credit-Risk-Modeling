@@ -56,9 +56,9 @@ Models were evaluated using various metrics:
 
 ### Model Performance
 
-- **Logistic Regression**: ROC AUC = X.XX
-- **Decision Tree**: ROC AUC = X.XX
-- **Random Forest**: ROC AUC = X.XX (Best Performing Model)
+- **Logistic Regression**: ROC AUC = 0.72
+- **Decision Tree**: ROC AUC = 0.80
+- **Random Forest**: ROC AUC = 0.94 (Best Performing Model)
 
 ### Request Example
 
