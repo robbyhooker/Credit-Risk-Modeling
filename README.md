@@ -11,15 +11,8 @@ This project aims to develop a statistical model to predict loan defaults based 
 3. [Feature Engineering](#feature-engineering)
 4. [Model Building](#model-building)
 5. [Model Evaluation](#model-evaluation)
-6. [Model Deployment](#model-deployment)
-7. [API Usage](#api-usage)
-8. [Results and Insights](#results-and-insights)
-9. [Future Work](#future-work)
-10. [Setup and Installation](#setup-and-installation)
-11. [Usage](#usage)
-12. [Contributing](#contributing)
-13. [License](#license)
-14. [Acknowledgements](#acknowledgements)
+6. [Results and Insights](#results-and-insights)
+7. [Future Work](#future-work)
 
 ## Dataset Description
 
@@ -94,7 +87,16 @@ Models were evaluated using various metrics:
   "loan_grade_G": 0,
   "cb_person_default_on_file_Y": 0
 }
-
-Response:</br>
-Model Default Prediction: 0 (non-default) </br>
+```
+Response:
+Model Default Prediction: 0 (non-default) 
 Model Confidence in Prediction: 0.95%
+
+## Results and Insights
+
+## Future Work
+Potential future improvements include:
+
+- Incorporating additional features such as credit score.
+- Testing other ensemble methods like Gradient Boosting.
+- Implementing a more sophisticated handling of missing data.
