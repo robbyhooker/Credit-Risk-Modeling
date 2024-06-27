@@ -38,6 +38,10 @@ The dataset used in this project is sourced from the [Kaggle](https://www.kaggle
 2. **Outlier Removal**: Outliers in numerical features were removed using the IQR method.
 3. **Encoding Categorical Variables**: Categorical variables were encoded using one-hot encoding.
 
+## Exploratory Data Analysis
+
+
+
 ## Model Building
 
 Multiple models were built and compared, including:
@@ -56,8 +60,8 @@ Models were evaluated using various metrics:
 
 ### Model Performance
 
-- **Logistic Regression**: ROC AUC = 0.72
-- **Decision Tree**: ROC AUC = 0.80
+- **Logistic Regression**: ROC AUC = 0.85
+- **Decision Tree**: ROC AUC = 0.87
 - **Random Forest**: ROC AUC = 0.94 (Best Performing Model)
 
 ### Request Example
@@ -93,6 +97,64 @@ Model Default Prediction: 0 (non-default)</br>
 Model Confidence in Prediction: 0.95%
 
 ## Results and Insights
+
+The Random Forest model showed the best performance with an ROC AUC score of X.XX. Key insights from the model include:
+
+### Feature Importances
+
+The feature importances in the Random Forest model show which variables are most predictive of loan default. The most important features are `loan_percent_income`, `person_income`, and `loan_int_rate`.
+
+![Feature Importances](Charts/feature_importance.png)
+
+### Distribution of Key Variables
+
+The distribution of key variables such as `person_age`, `person_income`, `loan_amnt`, and `loan_int_rate` can provide insights into the characteristics of the borrowers.
+
+#### Distribution of Person Age
+
+![Distribution of Person Age](path_to_your_image/age_distribution.png)
+
+#### Distribution of Person Income
+
+![Distribution of Person Income](path_to_your_image/income_distribution.png)
+
+#### Distribution of Loan Amount
+
+![Distribution of Loan Amount](path_to_your_image/loan_distribution.png)
+
+#### Distribution of Loan Interest Rate
+
+![Distribution of Loan Interest Rate](path_to_your_image/rate_distribution.png)
+
+### Relationship Between Variables
+
+Understanding the relationships between key variables such as `person_income` vs `loan_int_rate` and `interest_rate` vs `loan_amnt` can help identify trends and patterns.
+
+#### Person Income vs Loan Interest Rate
+
+![Person Income vs Loan Interest Rate](path_to_your_image/income_interestrate.png)
+
+#### Interest Rate vs Loan Amount
+
+![Interest Rate vs Loan Amount](path_to_your_image/interestrate_loanamnt.png)
+
+### Default Rates by Categories
+
+Default rates by categories such as `home_ownership`, `loan_intent`, and `loan_grade` provide insights into which groups are more likely to default.
+
+![Default Rates by Categories](path_to_your_image/default_rates.png)
+
+### Model Performance Metrics
+
+The performance of the Random Forest model is evaluated using ROC Curve and Confusion Matrix.
+
+#### ROC Curve
+
+![ROC Curve](path_to_your_image/rf_auc.png)
+
+#### Confusion Matrix
+
+![Confusion Matrix](path_to_your_image/rf_conf.png)
 
 ## Future Work
 Potential future improvements include:
