@@ -16,7 +16,7 @@ This project aims to develop a statistical model to predict loan defaults based 
 
 ## Dataset Description
 
-The dataset used in this project is sourced from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets). It includes features such as age, income, employment length, loan amount, loan interest rate, and others. The target variable is whether the borrower defaulted on the loan.
+The dataset used in this project is sourced from the [Kaggle]([https://www.kaggle.com/datasets/laotse/credit-risk-dataset]). It includes features such as age, income, employment length, loan amount, loan interest rate, and others. The target variable is whether the borrower defaulted on the loan.
 
 ### Features
 
@@ -88,8 +88,8 @@ Models were evaluated using various metrics:
   "cb_person_default_on_file_Y": 0
 }
 ```
-Response:
-Model Default Prediction: 0 (non-default) 
+Response:</br>
+Model Default Prediction: 0 (non-default)</br> 
 Model Confidence in Prediction: 0.95%
 
 ## Results and Insights
