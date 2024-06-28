@@ -47,6 +47,7 @@ The distribution of key variables such as `person_age`, `person_income`, `loan_a
 
 #### Distribution of Person Age
 We see from the below distribution that borrowers in this dataset tend to be younger. The intuition behind this is that typically older people have built up an amount of wealth that prevents them from needing to borrow.</br>
+
 ![Distribution of Person Age](Charts/age_distribution.png)
 
 #### Distribution of Person Income
@@ -56,10 +57,12 @@ We also see that majority of the persons income in this dataset fall within $30,
 
 #### Distribution of Loan Amount
 Considering the majority of incomes in the dataset, we would expect loan amount distribution to skew left. Indeed, the loans are mostly under $20,000.</br>
+
 ![Distribution of Loan Amount](Charts/loan_distribution.png)
 
 #### Distribution of Loan Interest Rate
 Without credit scores in the dataset the interest rates on the loans could be useful in gauging applicants, as typically better credit scores are rewarded with relativley lower interest rates. In this case the rates are somewhat evenly distributed, and this feature may be more useful at the individual level.</br>
+
 ![Distribution of Loan Interest Rate](Charts/rate_distribution.png)
 
 ### Scatter Plots of Variables and Defaults
@@ -67,23 +70,35 @@ Scatter plots with default indicators can help us visualize and identify groups 
 
 #### Person Income vs Loan Interest Rate (1 = Default)
 This chart is a visualization of how high interest and low income is a recipe for disaster. Another interesting takeaway is that high rates trend towards defult for all income levels, which could be an indicator of people with poor credit history (hence the high interest rate) sustaining their habit.</br>  
+
 ![Person Income vs Loan Interest Rate](Charts/income_interestrate.png)
 
 #### Interest Rate vs Loan Amount
 Also confirming the high interest rate-high default rate trend. This chart however does not show any obvious correlation between loan amount and default likelihood.</br> 
+
 ![Interest Rate vs Loan Amount](Charts/interestrate_loanamnt.png)
 
 #### Person Income vs Loan Amount
 This chart seems to point out the obvious but it is slightly jarring to look at. People taking loans that amount to a relativley large portion of their income are almost gaurunted to default. This group is the red diagonal on the left side of the plot.</br>
+
 ![Person Income vs Loan Amount](Charts/income_loanamnt.png)
 
 ### Default Rates by Categories
 
 Default rates by categories such as `home_ownership`, `loan_intent`, and `loan_grade` provide insights into which groups are more likely to default.
 
-![Person Income vs Loan Amount](Charts/dr_home.png)
+#### Default Rates by Home Ownership
+This chart indicates that a person who does not own their home (or working towards owning it) is more than twice as likely to default on a loan as someone who does. This is unsuprising but another discouraging piece of information for renters who cannot afford to buy a home in the current economy.</br> 
+
+![Default Rates Home Ownership](Charts/dr_home.png)
+
+#### Default Rates by Loan Grade
+Portraying the obvious here... but it is staggering that over 98% of G grade loan in this data set ended in defaults</br>
 
 ![Person Income vs Loan Amount](Charts/dr_grade.png)
+
+#### Default Rates by Loan Intent
+Not a ton of trends in this chart, although it is nice to see education with relativley low default rates. This could be due to the longer time to amoratize, or perhaps educated people better understand loans and the dangers of them. What stands out the most is that debt consolidation has the highest default rate... this feels like a bummer. 
 
 ![Person Income vs Loan Amount](Charts/dr_intent.png)
 
@@ -115,7 +130,7 @@ The Random Forest model showed the best performance with an ROC AUC score of 0.9
 
 ### Feature Importances
 
-The feature importances in the Random Forest model show which variables are most predictive of loan default. The most important features are `loan_percent_income`, `person_income`, and `loan_int_rate`.
+The feature importances in the Random Forest model show which variables are most predictive of loan default. The most important features are `loan_percent_income`, `person_income`, `loan_int_rate`, and `loan_grade`. These are all intuitivley important, but it is nice to verify that model recognizes this. It is also interesting to note that age and credit length aren't a very big factor in predicting default. This somewhat suggests that being a reckless debtor is inherent, and not something that can be easily learned away. **However, this is a large claim and would take enourmous amounts of social research to support!
 
 ![Feature Importances](Charts/feature_importance.png)
 
