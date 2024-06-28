@@ -191,4 +191,4 @@ Potential future improvements include:
 - Productionize the model into an API and allow public use
 
 ## Thanks for reading!!! 
-I love the idea of machines assisiting in managing risk, but it is scary to invision them having full decision making responsibilty. Biases can be baked into models in subtle ways and certain groups could get the short end of this stick and be unfairly treated. Hence it is best to always involve human intuition for human decisions. Anyways, I always enjoy working with data like this as it is fun to speculate on and helps me better understand our world one niche topic at a time:)
+I love the idea of machines assisiting in managing risk, but it is scary to invision them having full decision making responsibilty. Biases can be baked into models in subtle ways and certain groups could get the short end of this stick and be unfairly treated. Hence it is best to always involve human intuition for human decisions. Anyways, I always enjoy working with data like this as it is fun to speculate on and helps me better understand our world, one niche topic at a time:)
