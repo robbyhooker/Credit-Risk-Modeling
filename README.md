@@ -142,6 +142,8 @@ The performance of the Random Forest model is evaluated using ROC Curve and Conf
 
 #### ROC Curve
 
+** Reading the ROC Curve: Allowing for 0 false positives (predicting defualt when the case is non-default) we obtain some rate of true positives, in this case that is somewhere between 0.6 - 0.8. Now as we allow for more false positives the model also has a higher true positive rate and the curve goes up. The area under the curve (AUC) score is a common metric for model performance, and the ideal predictor is a horizontal line at y = 1.0.
+
 ![ROC Curve](Charts/rf_auc.png)
 
 #### Confusion Matrix
