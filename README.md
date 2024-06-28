@@ -126,7 +126,7 @@ Models were evaluated using various metrics:
 
 ## Results and Insights
 
-The Random Forest model showed the best performance with an ROC AUC score of 0.94. Key insights from the model include:
+The Random Forest model showed the best performance with an ROC AUC score of 0.94. Below we summarize the winning model:
 
 ### Feature Importances
 
@@ -184,3 +184,5 @@ Potential future improvements include:
 - Incorporating additional features such as credit score.
 - Testing other ensemble methods like Gradient Boosting.
 - Implementing a more sophisticated handling of missing data.
+
+## Thanks for reading!!! 
