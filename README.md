@@ -48,6 +48,7 @@ The distribution of key variables such as `person_age`, `person_income`, `loan_a
 #### Distribution of Person Age
 
 ![Distribution of Person Age](Charts/age_distribution.png)
+![Distribution of Person Income](Charts/income_distribution.png)
 
 #### Distribution of Person Income
 
