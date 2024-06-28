@@ -46,33 +46,33 @@ The dataset used in this project is sourced from the [Kaggle](https://www.kaggle
 The distribution of key variables such as `person_age`, `person_income`, `loan_amnt`, and `loan_int_rate` can provide insights into the characteristics of the borrowers.
 
 #### Distribution of Person Age
-
+We see from the below distribution that borrowers in this dataset tend to be younger. The intuition behind this is that typically older people have built up an amount of wealth that prevents them from needing to borrow. 
 ![Distribution of Person Age](Charts/age_distribution.png)
-![Distribution of Person Income](Charts/income_distribution.png)
 
 #### Distribution of Person Income
+We also see that majority of the persons income in this dataset fall within $30,000 - $80,000. Note this number is not representative of the population, rather the incomes of people who are taking loans. 
 
 ![Distribution of Person Income](Charts/income_distribution.png)
 
 #### Distribution of Loan Amount
-
+Considering the majority of incomes in the dataset, we would expect loan amount distribution to skew left. Indeed, the loans are mostly under $20,000.
 ![Distribution of Loan Amount](Charts/loan_distribution.png)
 
 #### Distribution of Loan Interest Rate
-
+Without credit scores in the dataset the interest rates on the loans could be useful in gauging applicants, as typically better credit scores are rewarded with relativley lower interest rates. In this case the rates are somewhat evenly distributed, and this feature may be more useful at the individual level. 
 ![Distribution of Loan Interest Rate](Charts/rate_distribution.png)
 
-### Relationship Between Variables
-
-Understanding the relationships between key variables such as `person_income` vs `loan_int_rate` and `interest_rate` vs `loan_amnt` can help identify trends and patterns.
-
-#### Person Income vs Loan Interest Rate
-
+#### Person Income vs Loan Interest Rate (1 = Default)
+This chart is a visualization of how high interest and low income is a recipe for disaster. Another interesting takeaway is that high rates trend towards defult for all income levels, which could be an indicator of people with poor credit history (hence the high interest rate) sustaining their habit.  
 ![Person Income vs Loan Interest Rate](Charts/income_interestrate.png)
 
 #### Interest Rate vs Loan Amount
-
+Also confirming the high interest rate-high default rate trend. This chart however does not show any obvious correlation between loan amount and default likelihood. 
 ![Interest Rate vs Loan Amount](Charts/interestrate_loanamnt.png)
+
+### Person Income vs Loan Amount
+This chart seems to point out the obvious but it is slightly jarring to look at. People taking loans that amount to a relativley large portion of their income are almost gaurunted to default. This group is the red diagonal on the left side of the plot. 
+![Person Income vs Loan Amount](Charts/income_loanamnt.png)
 
 ### Default Rates by Categories
 
