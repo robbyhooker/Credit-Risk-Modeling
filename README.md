@@ -12,7 +12,8 @@ This project aims to develop a statistical model to predict loan defaults based 
 4. [Model Building](#model-building)
 5. [Model Evaluation](#model-evaluation)
 6. [Results and Insights](#results-and-insights)
-7. [Future Work](#future-work)
+7. [Request Example](#request-example)
+8. [Future Work](#future-work)
 
 ## Dataset Description
 
@@ -40,7 +41,51 @@ The dataset used in this project is sourced from the [Kaggle](https://www.kaggle
 
 ## Exploratory Data Analysis
 
+### Distribution of Key Variables
 
+The distribution of key variables such as `person_age`, `person_income`, `loan_amnt`, and `loan_int_rate` can provide insights into the characteristics of the borrowers.
+
+#### Distribution of Person Age
+We see from the below distribution that borrowers in this dataset tend to be younger. The intuition behind this is that typically older people have built up an amount of wealth that prevents them from needing to borrow.</br>
+![Distribution of Person Age](Charts/age_distribution.png)
+
+#### Distribution of Person Income
+We also see that majority of the persons income in this dataset fall within $30,000 - $80,000. Note this number is not representative of the population, rather the incomes of people who are taking loans.</br> 
+
+![Distribution of Person Income](Charts/income_distribution.png)
+
+#### Distribution of Loan Amount
+Considering the majority of incomes in the dataset, we would expect loan amount distribution to skew left. Indeed, the loans are mostly under $20,000.</br>
+![Distribution of Loan Amount](Charts/loan_distribution.png)
+
+#### Distribution of Loan Interest Rate
+Without credit scores in the dataset the interest rates on the loans could be useful in gauging applicants, as typically better credit scores are rewarded with relativley lower interest rates. In this case the rates are somewhat evenly distributed, and this feature may be more useful at the individual level.</br>
+![Distribution of Loan Interest Rate](Charts/rate_distribution.png)
+
+### Scatter Plots of Variables and Defaults
+Scatter plots with default indicators can help us visualize and identify groups who are at higher risk of default
+
+#### Person Income vs Loan Interest Rate (1 = Default)
+This chart is a visualization of how high interest and low income is a recipe for disaster. Another interesting takeaway is that high rates trend towards defult for all income levels, which could be an indicator of people with poor credit history (hence the high interest rate) sustaining their habit.</br>  
+![Person Income vs Loan Interest Rate](Charts/income_interestrate.png)
+
+#### Interest Rate vs Loan Amount
+Also confirming the high interest rate-high default rate trend. This chart however does not show any obvious correlation between loan amount and default likelihood.</br> 
+![Interest Rate vs Loan Amount](Charts/interestrate_loanamnt.png)
+
+#### Person Income vs Loan Amount
+This chart seems to point out the obvious but it is slightly jarring to look at. People taking loans that amount to a relativley large portion of their income are almost gaurunted to default. This group is the red diagonal on the left side of the plot.</br>
+![Person Income vs Loan Amount](Charts/income_loanamnt.png)
+
+### Default Rates by Categories
+
+Default rates by categories such as `home_ownership`, `loan_intent`, and `loan_grade` provide insights into which groups are more likely to default.
+
+![Person Income vs Loan Amount](Charts/dr_home.png)
+
+![Person Income vs Loan Amount](Charts/dr_grade.png)
+
+![Person Income vs Loan Amount](Charts/dr_intent.png)
 
 ## Model Building
 
@@ -64,7 +109,29 @@ Models were evaluated using various metrics:
 - **Decision Tree**: ROC AUC = 0.87
 - **Random Forest**: ROC AUC = 0.94 (Best Performing Model)
 
-### Request Example
+## Results and Insights
+
+The Random Forest model showed the best performance with an ROC AUC score of 0.94. Key insights from the model include:
+
+### Feature Importances
+
+The feature importances in the Random Forest model show which variables are most predictive of loan default. The most important features are `loan_percent_income`, `person_income`, and `loan_int_rate`.
+
+![Feature Importances](Charts/feature_importance.png)
+
+### Model Performance Metrics
+
+The performance of the Random Forest model is evaluated using ROC Curve and Confusion Matrix.
+
+#### ROC Curve
+
+![ROC Curve](Charts/rf_auc.png)
+
+#### Confusion Matrix
+
+![Confusion Matrix](Charts/rf_conf.png)
+
+## Request Example
 
 ```json
  {
@@ -95,66 +162,6 @@ Models were evaluated using various metrics:
 Response:</br>
 Model Default Prediction: 0 (non-default)</br> 
 Model Confidence in Prediction: 0.95%
-
-## Results and Insights
-
-The Random Forest model showed the best performance with an ROC AUC score of X.XX. Key insights from the model include:
-
-### Feature Importances
-
-The feature importances in the Random Forest model show which variables are most predictive of loan default. The most important features are `loan_percent_income`, `person_income`, and `loan_int_rate`.
-
-![Feature Importances](Charts/feature_importance.png)
-
-### Distribution of Key Variables
-
-The distribution of key variables such as `person_age`, `person_income`, `loan_amnt`, and `loan_int_rate` can provide insights into the characteristics of the borrowers.
-
-#### Distribution of Person Age
-
-![Distribution of Person Age](Charts/age_distribution.png)
-
-#### Distribution of Person Income
-
-![Distribution of Person Income](Charts/income_distribution.png)
-
-#### Distribution of Loan Amount
-
-![Distribution of Loan Amount](Charts/loan_distribution.png)
-
-#### Distribution of Loan Interest Rate
-
-![Distribution of Loan Interest Rate](Charts/rate_distribution.png)
-
-### Relationship Between Variables
-
-Understanding the relationships between key variables such as `person_income` vs `loan_int_rate` and `interest_rate` vs `loan_amnt` can help identify trends and patterns.
-
-#### Person Income vs Loan Interest Rate
-
-![Person Income vs Loan Interest Rate](Charts/income_interestrate.png)
-
-#### Interest Rate vs Loan Amount
-
-![Interest Rate vs Loan Amount](Charts/interestrate_loanamnt.png)
-
-### Default Rates by Categories
-
-Default rates by categories such as `home_ownership`, `loan_intent`, and `loan_grade` provide insights into which groups are more likely to default.
-
-![Default Rates by Categories](Charts/default_rates.png)
-
-### Model Performance Metrics
-
-The performance of the Random Forest model is evaluated using ROC Curve and Confusion Matrix.
-
-#### ROC Curve
-
-![ROC Curve](Charts/rf_auc.png)
-
-#### Confusion Matrix
-
-![Confusion Matrix](Charts/rf_conf.png)
 
 ## Future Work
 Potential future improvements include:
