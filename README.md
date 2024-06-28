@@ -104,19 +104,21 @@ Not a ton of trends in this chart, although it is nice to see education with rel
 
 ## Model Building
 
-Multiple models were built and compared, including:
+Multiple models were built and compared using sklearns modeling and metric packages.
+The models tested in this project include: 
+
 - Logistic Regression
 - Decision Tree
 - Random Forest
 
-Hyperparameter tuning was performed using GridSearchCV to find the best parameters for the randon forest model.
+Hyperparameter tuning was performed using GridSearchCV to find the best parameters for the random forest model.
 
 ## Model Evaluation
 
 Models were evaluated using various metrics:
 - **Confusion Matrix**: To visualize the performance in terms of true positives, true negatives, false positives, and false negatives.
-- **ROC Curve**: To evaluate the model's ability to distinguish between classes.
-- **AUC Score**: To quantify the overall performance.
+- **ROC Curve**: To evaluate the model's ability to distinguish between classes (Default vs Non-Default).
+- **AUC Score**: Area under the ROC Curve to quantify the overall performance.
 
 ### Model Performance
 
@@ -147,6 +149,8 @@ The performance of the Random Forest model is evaluated using ROC Curve and Conf
 ![Confusion Matrix](Charts/rf_conf.png)
 
 ## Request Example
+
+Below we give the model a (made up) persons loan information, and the model returns an adequate prediction. 
 
 ```json
  {
@@ -182,7 +186,9 @@ Model Confidence in Prediction: 0.95%
 Potential future improvements include:
 
 - Incorporating additional features such as credit score.
-- Testing other ensemble methods like Gradient Boosting.
+- Get way more data and build a neural network:)
 - Implementing a more sophisticated handling of missing data.
+- Productionize the model into an API and allow public use
 
 ## Thanks for reading!!! 
+I love the idea of machines assisiting in managing risk, but it is scary to invision them having full decision making responsibilty. Biases can be baked into models in subtle ways and certain groups could get the short end of this stick and be unfairly treated. Hence it is best to always involve human intuition for human decisions. Anyways, I always enjoy working with data like this as it is fun to speculate on and helps me shape my understanding of the world one niche topic at a time. 
