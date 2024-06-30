@@ -28,8 +28,8 @@ The dataset used in this project is sourced from the [Kaggle](https://www.kaggle
 - `loan_int_rate`: Interest rate on the loan
 - `loan_percent_income`: Percentage of income that goes towards loan payments
 - `cb_person_cred_hist_length`: Length of credit history in years
-- `person_home_ownership`: Home ownership status (OWN, RENT, MORTGAGE, OTHER)
-- `loan_intent`: Purpose of the loan (EDUCATION, HOMEIMPROVEMENT, MEDICAL, PERSONAL, VENTURE)
+- `person_home_ownership`: Home ownership status (Own, Rent, Mortgage, Other)
+- `loan_intent`: Purpose of the loan (Education, Home Improvement, Medical, Personal, Venture)
 
 ## Data Preprocessing
 
